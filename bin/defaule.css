@@ -1,0 +1,610 @@
+			#name1 {
+				left: 5px;
+			}
+			#name1, #name2, #name3 {
+				font-family: 'Open Sans',Arial, Helvetica, sans-serif;
+				font-size: 40px;
+				color: #fff;
+				position: absolute;
+				top: 26px;
+			}
+			/** {
+				margin: 0px;
+				padding: 0;
+				border: 0;
+				font-family: sans-serif;
+				font-size: 1em;
+				font-weight: normal;
+				font-style: normal;
+				text-decoration: none;
+			}*/
+			body {
+				background: #260930 url('../T/l.jpg') no-repeat fixed top; 
+				overflow: scroll;
+			}
+			#engines1, #engines2, #engines3 {
+				width: 120px;
+				height: 30px;
+				position: absolute;
+				top: 0px;
+				right: 65px;
+				display: none;
+			}
+			#google1, #google2, #google3 {
+				background: url(../T/google-back.png) center center no-repeat;
+			}
+			#engines1 div, #engines2 div, #engines3 div {
+				width: 30px;
+				height: 30px;
+				float: left;
+				margin: 0px !important;
+				padding: 0px !important;
+			}
+			#yahoo1, #yahoo2, #yahoo3 {
+				background: url(../T/yahoo.png) center center no-repeat;
+			}
+			#wikipedia1, #wikipedia2, #wikipedia3 {
+				background: url(../T/wikipedia.png) center center no-repeat;
+			}
+			#search-engine1, #search-engine2, #search-engine3 {
+				height: 30px;
+				width: 30px;
+				position: absolute;
+				top: 0px;
+				right: 40px;
+				background: url('../T/search.png') center center no-repeat;
+			}
+			#search-engine1:hover, #search-engine2:hover, #search-engine3:hover ,#search-engine4{
+				background: url('../T/search-hover.png') center center no-repeat;
+				cursor: pointer;
+				border: 0px !important;
+				box-shadow: 0px 0px 0px #fff !important;
+				margin: 5px !important;
+			}
+			#wrapper1 div:hover {
+				border: 1px #fff solid;
+				box-shadow: 0px 0px 5px #fff;
+				margin-left: 4px;
+				margin-top: 4px;
+			}
+
+			form {
+				width: 640px;
+				height: 30px;
+				position: absolute;
+				left: 10px;
+				top: 568px;
+				font-family: Tahoma, Arial, "MS Trebuchet", sans-serif;
+				text-align: center;
+				padding: 0px;
+			}
+			button {
+				height: 30px;
+				width: 30px;
+				margin-left: 5px;
+				vertical-align: bottom;
+				background: url('../T/arrow.png') no-repeat center;
+				color: #333;
+				font-family: Tahoma, Arial, "MS Trebuchet", sans-serif;
+				font-size: 14px;
+				margin-bottom: 5px;
+				margin-right: 5px;
+				text-transform: uppercase;
+			}
+			#bing1, #bing2, #bing3 {
+				background: url(../T/bing.png) center center no-repeat;
+			}
+			#weather {
+				width: 215px;
+				height: 113px;
+				left: 86px;
+				top: 111px;
+				position: absolute;
+
+				/*background: url('../T/1.png');*/
+				line-height: 110px;
+			}
+			#wrapper1 div, #wrapper2 div, #wrapper3 div {
+				margin: 5px;
+				text-align: center;
+			}
+			.clearfix {
+				display: block;
+			}
+			#tp-weather-widget .info {
+				position: absolute;
+				right: 5px;
+				top: 7px;
+				left: 0px;
+				height: 0px;
+				width: 0px;
+			}
+			#tp-weather-widget .header {
+				/* background: url(/images/box_header.gif) top; */
+				border-bottom: dotted 1px #999999;
+				padding: 6px 5px 5px 9px;
+				color: #4372b0;
+				position: relative;
+				text-align: left;
+			}
+			.clearfix {
+				display: inline-block;
+			}
+			.corner-all {
+				-moz-border-radius: 3px /*{cornerRadius}*/;
+				-webkit-border-radius: 3px /*{cornerRadius}*/;
+				border-radius: 3px /*{cornerRadius}*/;
+			}
+			#tp-weather-widget {
+				padding: 4px;
+				margin: 0px 0px 10px 0px;
+				position: relative;
+				font-family: Tahoma;
+				font-size: 12px;
+				line-height: 100%;
+				top: 7px;
+				left: 0px;
+				height: 0px;
+				width: 0px;
+			}
+			.spig {
+				display: block;
+				width: 150px;
+				height: 190px;
+				position: absolute;
+				top: -200px;
+				left: 160px;
+				z-index: 9999;
+			}
+			.wordpress {
+    				position: absolute;	
+    				top: 146px;
+    				left: 229px;
+    				width: 227px;
+   				height: 112px;
+   				background: url('../T/wordpress.png') -68px -95px;
+			}
+                        .discuz {
+                                position: absolute;
+                                top: 261px;
+                                left: 229px;
+                                width: 227px;
+                                height: 74px;
+                                background: url('../T/discuz.png') -123px -88px;
+                        }
+			.csdn {
+				position: absolute;
+				top: 27px;
+				left: 250px;
+				width: 241px;
+				height: 115px;
+				background: url('../T/csdn.png') -27px 3px;
+			}			
+                        .splunk {
+                                position: absolute;
+                                top: 27px;
+                                left: 35px;
+                                width: 211px;
+                                height: 60px;
+                                background: url('../T/splunk.png') -67px -44px;
+                        }
+                        .zabbix {
+                                position: absolute;
+                                top: 89px;
+                                left: 35px;
+                                width: 211px;
+                                height: 53px;
+                                background: url('../T/zabbix.png') -3px -15px;
+                        }
+			.cto {
+				position: absolute;
+				top: 26px;
+				left: 495px;
+				width: 194px;
+				height: 115px;
+				background: url('../T/51cto.png') -19px 8px;
+			}			
+			.b_blog {
+				background-repeat:no-repeat;
+				position: absolute;
+				top: 26px;
+				left: 693px;
+				width: 228px;
+				height: 115px;
+				background: url('../T/blogyuan.png') -42px -16px;
+			}
+			
+			.github {
+				position: absolute;
+				top: 531px;
+				left: 31px;
+				width: 193px;
+				height: 187px;
+				background: url('../T/github.png') 1px -2px;
+			}		
+                        .translate_google {
+                                position: absolute;
+                                top: 340px;
+                                left: 31px;
+                                width: 193px;
+                                height: 187px;
+                                background: url('../T/googlefanyi.png') -81px -62px;
+                        }
+                        .confluence {
+                                position: absolute;
+                                top: 147px;
+                                left: 34px;
+                                width: 191px;
+                                height: 188px;
+                                background: url('../T/wiki_min.png') 0px 1px;
+                        }
+
+			.txyun {
+				position: absolute;
+				top: 147px;
+				left: 1164px;
+				width: 160px;
+				height: 190px;
+				background: url('../T/txyun.png') -9px 4px;
+			}
+			.xlang {
+				position: absolute;
+				top: 26px;
+				left: 925px;
+				width: 217px;
+				height: 115px;
+				background: url('../T/xlang.png') -43px -31px;
+			}		
+			.xlwbo {
+				position: absolute;
+				top: 26px;
+				left: 1146px;
+				width: 228px;
+				height: 115px;
+				background: url('../T/xlwbo.png') -17px 7px;
+			}			
+			.baidu {
+				position: absolute;
+				top: 146px;
+				left: 693px;
+				width: 227px;
+				height: 78px;
+				background: url('../T/baidu.png') -37px -22px;
+			}			
+			.goog {
+				position: absolute;
+				top: 227px;
+				left: 863px;
+				width: 297px;
+				height: 109px;
+				background: url('../T/google.png') -8px 5px;
+			}
+			.youdao {
+				position: absolute;
+				top: 340px;
+				left: 519px;
+				width: 225px;
+				height: 65px;
+				background: url('../T/youdao.png') 13px 1px;
+			}
+			.yahoo {
+				position: absolute;
+				top: 227px;
+				left: 693px;
+				width: 166px;
+				height: 50px;
+				background: url('../T/yahoo2.png') 2px -4px;
+			}
+			.bing {
+				position: absolute;
+				top: 340px;
+				left: 747px;
+				width: 163px;
+				height: 65px;
+				background: url('../T/Bing2.png') -11px -9px;
+			}
+			.wpd {
+				position: absolute;
+				top: 409px;
+				left: 1186px;
+				width: 184px;
+				height: 173px;
+				background: url('../T/wpd.png') 8px 8px;
+			}			
+			._163 {
+				position: absolute;
+				top: 340px;
+				left: 1169px;
+				width: 201px;
+				height: 66px;
+				background: url('../T/163.png') -15px 0px;
+			}			
+			.xtjjin {
+				position: absolute;
+				top: 529px;
+				left: 1038px;
+				width: 145px;
+				height: 53px;
+				background: url('../T/xt2.png') -5px -2px;
+			}
+			.qqm {
+				position: absolute;
+				top: 340px;
+				left: 914px;
+				width: 252px;
+				height: 65px;
+				background: url('../T/qqmail.png') -12px -2px;
+			}			 
+			.jd {
+				position: absolute;
+				top: 585px;
+				left: 1346px;
+				width: 172px;
+				height: 72px;
+				background: url('../T/jd.png') -19px -7px;
+			}			
+			.ct { 
+				position: absolute;
+				top: 585px;
+				left: 1522px;
+				width: 102px;
+				height: 73px;
+				background: url('../T/ct.png') 2px -14px;
+			}
+			.ipman {
+				position: absolute;
+				top: 26px;
+				left: 1377px;
+				width: 244px;
+				height: 116px;
+				background: url('../T/itman.png') -12px 2px;
+			}		
+			.cw-icon i {
+				display: block;
+				position: absolute;
+				overflow: hidden;
+			}
+                        .youtube {
+                                position: absolute;
+                                top: 340px;
+                                left: 228px;
+                                width: 288px;
+                                height: 187px;
+                                background: url('../T/youtube.png') -85px -89px;
+                        }
+			.yuanke {
+				position: absolute;
+				top: 146px;
+				left: 460px;
+				width: 229px;
+				height: 190px;
+				background: url('../T/yuanke.png') -31px -4px;
+			}				
+			.youdao {
+				position: absolute;
+				top: 340px;
+				left: 519px;
+				width: 225px;
+				height: 64px;
+				background: url('../T/youdao.png') 13px 0px;
+			}
+			.taobao {
+				position: absolute;
+				top: 340px;
+				left: 1374px;
+				width: 248px;
+				height: 190px;
+				background: url('../T/taobao.png') -26px 14px;
+			}			
+			.processon {
+				position: absolute;
+				top: 408px;
+				left: 518px;
+				width: 275px;
+				height: 118px;
+				background: url('../T/ProcessOn.png') 1px -2px;
+			}		
+			.aliyun {
+				position: absolute;
+				top: 280px;
+				left: 693px;
+				width: 166px;
+				height: 56px;
+				background: url('../T/aliyun.png') -6px -2px;
+			}			
+			.boot {
+				position: absolute;
+				top: 585px;
+				left: 1098px;
+				width: 245px;
+				height: 73px;
+				background: url('../T/bootstrap.png') -1px 6px;
+			}
+			.lgou {
+				position: absolute;
+				top: 409px;
+				left: 1074px;
+				width: 109px;
+				height: 117px;
+				background: url('../T/lgou.png') -3px -4px;
+			}			
+			.bdtji {
+				position: absolute;
+				top: 529px;
+				left: 878px;
+				width: 157px;
+				height: 53px;
+				background: url('../T/bdtji.png') -13px -9px;
+			}		
+			.ipcn {
+				position: absolute;
+				top: 145px;
+				left: 924px;
+				width: 236px;
+				height: 79px;
+				background: url('../T/ipcn.png') -94px -13px;
+			}		
+			.txwbo {
+				position: absolute;
+				top: 26px;
+				left: 1404px;
+				width: 115px;
+				height: 115px;
+				background: url('../T/txwbo.png') -114px 1px;
+			}
+			.kyun {
+				position: absolute;
+				top: 532px;
+				left: 1374px;
+				width: 249px;
+				height: 50px;
+				background: url('../T/kyun.png') -3px -9px;
+			}			
+			.dns {
+				position: absolute;
+				top: 408px;
+				left: 796px;
+				width: 275px;
+				height: 118px;
+				background: url('../T/dnspod.png') 11px 0px;
+			}			
+			.zhihu {
+				position: absolute;
+				top: 147px;
+				left: 1328px;
+				width: 294px;
+				height: 190px;
+				background: url('../T/zhihu.png') -18px -4px;
+			}
+			.avm {
+				top:0px;
+				left: 4px;
+				right: 0px;
+				width: 1842px;
+				height: 565px;
+			}
+			.keys{
+				top:84px;
+				left: 57px;
+				right: 0px;
+				width: 1842px;
+				height: 565px;
+			}
+			#wrapper {
+				width: 976px;
+				height: 480px;
+				position: absolute;
+				top: 70px;
+				left: 4px;
+				right: 0px
+			#wrapper1, #wrapper2, #wrapper3 {
+				width: 976px;
+				height: 480px;
+				position: absolute;
+				top: 70px;
+				left: 4px;
+				right: 0px;
+			}
+			#place {
+				
+				width: 3065px;
+				height: 560px;
+				margin: 0px;
+			}
+			input {
+				width: 583px;
+				height: 24px;
+				margin: 0px 0px 5px 5px;
+				background: #fff;
+				border: 2px #fff solid;
+				color: #333;
+				font-family: Tahoma, Arial, "MS Trebuchet", sans-serif;
+				font-size: 14px;
+				line-height: 24px;
+				padding: 1px;
+			}
+			#place {
+				position: relative;
+				width: 3065px;
+				height: 560px;
+				margin: 0px;
+			}
+			
+			
+			.abc{ height:300px; border:1px solid #000; margin:0 auto}
+			@media screen and (min-width: 1201px) {
+			.abc {width: 1200px}
+			}
+			/* 设置了浏览器宽度不小于1201px时 abc 显示1200px宽度 */
+
+			@media screen and (max-width: 1200px) {
+			.abc {width: 900px}
+			}
+			/* 设置了浏览器宽度不大于1200px时 abc 显示900px宽度 */
+
+			@media screen and (max-width: 900px) {
+			.abc {width: 200px;}
+			}
+			/* 设置了浏览器宽度不大于900px时 abc 显示200px宽度 */
+
+			@media screen and (max-width: 500px) {
+			.abc {width: 100px;}
+			}
+			/* 设置了浏览器宽度不大于500px时 abc 显示100px宽度 */
+
+						
+			/*
+			.head-engine, .head-words {
+				margin-top: 20px;
+			}
+			.engine-wrapper {
+				width: 398px;
+				border: 1px solid #c6cdd4;
+				margin-right: 20px;
+				overflow: hidden;
+				height: 30px;
+				position: relative;
+				background: #fff;
+			}
+			.engine-options {
+				width: 72px;
+				float: left;
+				border-right: 1px solid #c6cdd4;
+				position: relative;
+			}
+			.engine-options .baidu {
+				background-position: -36px 7px;
+			}
+			.engine-options span {
+				margin-left: 6px;
+				color: #777;
+				font-size: 12px;
+				text-indent: 20px;
+			}
+			.engine-options i {
+				width: 16px;
+				height: 10px;
+				margin-top: 10px;
+				background-position: 4px -36px;
+			}
+			div {
+				display: block;
+			}
+			.engine-inputs .engine-key {
+				margin: 0 6px;
+				padding: 4px 0;
+				width: 280px;
+			}
+			.engine-inputs input {
+				border: 0;
+			}
+			.engine-inputs .engine-submit {
+				width: 32px;
+				height: 30px;
+				background-position: 0 7px;
+				position: absolute;
+				right: 0;
+				top: 0;
+				cursor: pointer;
+			}
+			*/

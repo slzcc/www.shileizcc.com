@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http=equiv="contret-type" content='text/html;charset=utf-8'>
+		<title>注册</title>
+		<style>
+			.clearfix:after {
+				content: ".";
+				display: block;
+				height: 0;
+				clear: both;
+				visibility: hidden;
+				
+			}
+			.logo_form {
+				margin: 111px;
+				left: 100px;
+				position: relative;
+				width: 444px;
+				background: #fff;
+				padding: 76px 100px 290px;
+				overflow: visible;
+				width: 646px;
+			}
+			.logo_meli{
+				margin-top:111px;
+				position:relative;
+				width:444px;
+				background:#fff;
+				padding:50px 33px 118px;
+				overflow:visible;
+				width:20%;
+
+			}
+			.logo_label{
+				position: absolute;
+				z-index: 3;
+				top: 0;
+				left: 0;
+				width: 38px;
+				height: 38px;
+				border-right: 1px solid #bdbdbd;
+				background: url(./T/new.png);
+				}
+				.label, .thickbox-form .label {
+					width: 190px;
+					text-align: right;
+					font-size: 14px;
+					color: #999;
+					padding-right: 10px;
+				}
+				#regist .label b, .thickbox-form .label b {
+					font-family: "????";
+					margin-right: 5px;
+					font-weight: normal;
+				}
+				
+				.ftx04, .flk04 a:link, .flk04 a:visited, a.flk04:link, a.flk04:visited {
+					color: #F00;
+				}
+				#regist .item .item_ifo, .thickbox-form .item .item-ifo {
+					position: relative;
+					width: 270px;
+				}
+				body .fl {
+					float: left;
+				}
+				#pwdstrength {
+					color: #999;
+					line-height: 22px;
+					padding-right: 10px;
+					clear: both;
+					float: none;
+					position: absolute;
+					top: 41px;
+					right: -9px;
+				}
+
+		</style>
+		
+		
+	</head>
+	
+	<body>
+		<div style=
+		'position:relative;height:194px;background-color:#998;width:100%;top:4px;z-index:-1;'>
+			
+		<div style="position:absolute;background-image:url('./T/4.png');height:221px;background-repeat:no-repeat;z-index:2;width:80%;top:4px;left:120px;bottom:0;"></div>
+		</div>
+		<br/>
+		<div style="background-image:url('./psbk.jpg');wider:200">
+			
+		</div>
+		<fieldset class='logo_form'>
+			<!--<label for="loginname" class="login-label name-label"></label>-->
+
+			<legend>注册</legend>
+			<h1 style='margin-bottom:20px;margin-top:-22px;'>注册新用户</h1>
+			<span class="label"><b class="ftx04">*</b>用户名:&nbsp &nbsp </span>
+			<input type="text" id="regName" name="regName" maxlength="20" class="text" tabindex="1" autocomplete="off"  placeholder="用户名" onpaste="return false;" value="" onfocus="if(this.value=='' ) this.value='';this.style.color='#333'" onblur="if(this.value=='') {this.value='';this.style.color='#999999'} ">
+			<br/><br/>
+            <span class="label"><b class="ftx04">*</b>请设置密码：</span>
+			<input type="password" id="pwd" name="pwd" maxlength="20" class="text" tabindex="2" placeholder="密码" style="ime-mode:disabled;" onpaste="return  false" autocomplete="off" sta="0">
+            <br/><br/>       
+			<span class="label"><b class="ftx04">*</b>请确认密码：</span>
+			<input type="password" id="pwdRepeat" name="pwdRepeat" maxlength="20" class="text"placeholder="确认密码" tabindex="3" onpaste="return  false" autocomplete="off">
+			<br/><br/>
+			<span class="label"><b class="ftx04">*</b>验证码：&nbsp&nbsp </span>
+			<input type="text" id="authcode" style="ime-mode:disabled" name="authcode" class="text text-1" tabindex="6" autocomplete="off" maxlength="6" placeholder="验证码">
+			<label class="img">
+            <img style="cursor:pointer;width:100px;height:36px;display:block;margin-top:40px;" alt=""  onclick="this.src= document.location.protocol +'//authcode.jd.com/verify/image?a=0&amp;acid=5cea34bf-1043-4400-8936-e635cc53402a&amp;uid=5cea34bf-1043-4400-8936-e635cc53402a&amp;srcid=reg&amp;is=8eaf29a1c26ba3e99badfc0205c6bbdc&amp;yys='+new Date().getTime()" ver_colorofnoisepoint="#888888" id="JD_Verification1" src="https://authcode.jd.com/verify/image?a=0&amp;acid=5cea34bf-1043-4400-8936-e635cc53402a&amp;uid=5cea34bf-1043-4400-8936-e635cc53402a&amp;srcid=reg&amp;is=8eaf29a1c26ba3e99badfc0205c6bbdc&amp;yys=1453977943848"> </label>
+			<script type="text/javascript">$("#JD_Verification1").click();</script>
+			<br/><br/>
+			<div class="item">
+                <span class="label">&nbsp;</span>
+                <input type="button" class="btn-img btn-regist" id="registsubmit" value="立即注册" style='width:200px' tabindex="8" onclick="reg();">
+            </div>
+		</fieldset>
+
+		
+	</body>
+	
+</html>
+	
