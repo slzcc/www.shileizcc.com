@@ -1,4 +1,7 @@
 node(){
+  stage('Clean up the residual')
+    sh 'rm -rf ${WORKSPACE}/*'
+
   stage "GIt"
     git "https://github.com/slzcc/www.shileizcc.com"
     Commit = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
@@ -49,6 +52,6 @@ node(){
     stage('执行脚本生成模板 ')
      
         echo "-***************************************-"
-        sh "python3 yaml_jinja2.py > gateway.json"
+        sh "python3 yaml_jinja2.py > ${WORKSPACE}/gateway.json"
         echo "***************************************>"
 }
