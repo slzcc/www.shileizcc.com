@@ -5,7 +5,7 @@ node(){
 
   stage "Build"
 
-    Registry_url="https://registry.aliyuncs.com"
+    Registry_url="https://registry.aliyuncs.com/"
     Registry_addr="registry.aliyuncs.com"
     Maintainer_name="slzcc"
     Container_name="nginx"
