@@ -20,7 +20,7 @@
     "template": {
       "metadata": {
         "labels": {
-          "app": "{{ ServicesName }}",
+          "app": "{{ AppName }}",
           "task": "{{ ServicesName }}",
           "version": "{{ MetadataVersion }}"
         }
