@@ -1,4 +1,7 @@
 node(){
+  stage('Clean up the residual')
+    sh 'rm -rf ${WORKSPACE}/*'
+
   stage "GIt"
     git "https://github.com/slzcc/www.shileizcc.com"
     Commit = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
