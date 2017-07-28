@@ -31,11 +31,11 @@ node(){
     }
     stage('准备环境变量')
      
-        env.MetadataName = "jenkins"
+        env.MetadataName = "gateway"
         env.MetadataNamespace = "default"
         env.MetadataVersion = "v2"
         env.SpecReplicas = "1"
-        env.SpecTemplateMetadataLabelsVersion = "${MetadataVersion}"
+        env.SpecTemplateMetadataLabelsVersion = env.MetadataVersion
         env.ContainerImage = "${ContainerImage}"
         env.ServicesName = "gateway"
         env.AppName = "cheese"
