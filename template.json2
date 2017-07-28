@@ -1,0 +1,70 @@
+{
+  "apiVersion": "extensions/v1beta1",
+  "kind": "Deployment",
+  "metadata": {
+    "name": "{{ MetadataName }}",
+    "namespace": "{{ MetadataNamespace }}",
+    "labels": {
+      "app": "{{ AppName }}",
+      "cheese": "{{ ServicesName }}"
+    }
+  },
+  "spec": {
+    "replicas": {{ SpecReplicas }},
+    "selector": {
+      "matchLabels": {
+        "app": "{{ AppName }}",
+        "task": "{{ ServicesName }}"
+      }
+    },
+    "template": {
+      "metadata": {
+        "labels": {
+          "app": "{{ ServicesName }}",
+          "task": "{{ ServicesName }}",
+          "version": "{{ MetadataVersion }}"
+        }
+      },
+      "spec": {
+        "nodeSelector": {
+          "role": "shileizcc.com"
+        },
+        "containers": [
+          {
+            "name": "{{ ServicesName }}",
+            "image": "{{ ContainerImage }}",
+            "ports": [
+              {
+                "name": "{{ PortsName }}",
+                "containerPort": {{ PortsEndpoint }}
+              }
+            ],
+            "env":{
+              "name": "TZ",
+              "value": "Asia/Shanghai"
+            },
+            "volumeMounts": [
+              {
+                "mountPath": "/etc/nginx/conf.d",
+                "name": "config-volume"
+              }
+            ]
+          }
+        ],
+        "imagePullSecrets": [
+          {
+            "name": "myregistrykey"
+          }
+        ],
+        "volumes": [
+          {
+            "name": "{{ volumesName }}",
+            "configMap": {
+              "name": "{{ volumesEndpoint }}"
+            }
+          }
+        ]
+      }
+    }
+  }
+}
