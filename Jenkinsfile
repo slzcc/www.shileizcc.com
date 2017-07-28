@@ -19,10 +19,34 @@ node(){
       echo "****************************************************************************************************************"
       echo "The Demo Image is ${Registry_addr}/${Maintainer_name}/${Container_name}:${Tag}-${Commit}"
       echo "****************************************************************************************************************"
-      
+
       stage('Docker Push')
       //  input "请确保上述没问题后，Push 远程仓库！"
-        newContainers.push()
+      //  newContainers.push()
 
     }
+    stage('准备环境变量')
+     
+        env.MetadataName = "jenkins"
+        env.MetadataNamespace = "default"
+        env.MetadataVersion = "v2"
+        env.SpecReplicas = "1"
+        env.SpecTemplateMetadataLabelsVersion = MetadataVersion
+        env.ContainerImage = "${ContainerImage}"
+        env.ServicesName = "jenkins"
+        env.AppName = "cheese"
+        env.CPU = "1000m"
+        env.MEM = "600Mi"
+        env.PortsName = "http"
+        env.PortsEndpoint = 8080
+        env.volumeMountsName = "home"
+        env.volumeMountsEndpoint = "/var/jenkins_home"
+        env.volumesName = "home"
+        env.volumesEndpoint= "/var/jenkins_home"
+    
+    stage('执行脚本生成模板 ')
+     
+        echo "-***************************************-"
+        sh "python3 jinja2.py"
+        echo "***************************************>"
 }
