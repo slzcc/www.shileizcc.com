@@ -53,6 +53,6 @@ node(){
      
         echo "-***************************************-"
 //        sh "python3 yaml_jinja2.py > ${WORKSPACE}/gateway.json"
-//        sh "python3 yaml_jinja2.py"
+        sh "python3 yaml_jinja2.py"
         echo "***************************************>"
 }
