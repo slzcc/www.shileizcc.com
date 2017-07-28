@@ -10,8 +10,10 @@ node(){
     Maintainer_name="slzcc"
     Container_name="nginx"
     Tag="gateway"
+    
+    Account = "AliyunHubAccount"
 
-    docker.withRegistry("${Registry_url}", "${AliyunHubAccount}") {
+    docker.withRegistry("${Registry_url}", "${Account}") {
 
       def newContainers = docker.build "${Maintainer_name}/${Container_name}:${Tag}-${Commit}"
 
