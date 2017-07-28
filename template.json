@@ -22,10 +22,19 @@
       "metadata": {
         "labels": {
           "name": "{{ ServicesName }}",
-          "version": "{{ SpecTemplateMetadataLabelsVersion }}"
+          "version": "{{ MetadataVersion }}"
         }
       },
       "spec": {
+        "nodeSelector": {
+          "role": "shileizcc.com"
+        },
+        "volumes": {
+          "name": "{{ volumesName }}",
+          "configMap": {
+            "name": "{{ volumesEndpoint }}"
+          }
+        },
         "containers": [
           {
             "name": "{{ ServicesName }}",
@@ -55,6 +64,10 @@
             "env":{
               "name": "TZ",
               "value": "Asia/Shanghai"
+            },
+            "volumeMounts":{
+              "name": "{{ volumeMountsName }}",
+              "mountPath": "{{ volumeMountsEndpoint }}"
             }
           }
         ]

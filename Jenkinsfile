@@ -35,18 +35,18 @@ node(){
         env.MetadataNamespace = "default"
         env.MetadataVersion = "v2"
         env.SpecReplicas = "1"
-        env.SpecTemplateMetadataLabelsVersion = env.MetadataVersion
+//        env.SpecTemplateMetadataLabelsVersion = env.MetadataVersion
         env.ContainerImage = "${ContainerImage}"
         env.ServicesName = "gateway"
         env.AppName = "cheese"
-        env.CPU = "1000m"
-        env.MEM = "600Mi"
+        env.CPU = "10m"
+        env.MEM = "20Mi"
         env.PortsName = "http"
-        env.PortsEndpoint = 8080
-        env.volumeMountsName = "home"
-        env.volumeMountsEndpoint = "/var/jenkins_home"
+        env.PortsEndpoint = 80
+        env.volumeMountsName = "config-volume"
+        env.volumeMountsEndpoint = "/etc/nginx/conf.d"
         env.volumesName = "home"
-        env.volumesEndpoint= "/var/jenkins_home"
+        env.volumesEndpoint= "gateway"
         env.LC_ALL="C"
     
     stage('执行脚本生成模板 ')
