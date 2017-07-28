@@ -11,9 +11,9 @@ node(){
     Container_name="nginx"
     Tag="gateway"
 
-    Account = "aliyunhub"
+    docker_creds_id = "aliyunhub"
 
-    docker.withRegistry("${Registry_url}", "${Account}") {
+    docker.withRegistry("${Registry_url}", "${docker_creds_id}") {
 
       def newContainers = docker.build "${Maintainer_name}/${Container_name}:${Tag}-${Commit}"
 
