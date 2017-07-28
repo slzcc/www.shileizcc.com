@@ -35,7 +35,7 @@ node(){
         env.MetadataNamespace = "default"
         env.MetadataVersion = "v2"
         env.SpecReplicas = "1"
-        env.SpecTemplateMetadataLabelsVersion = ${MetadataVersion}
+        env.SpecTemplateMetadataLabelsVersion = "${MetadataVersion}"
         env.ContainerImage = "${ContainerImage}"
         env.ServicesName = "jenkins"
         env.AppName = "cheese"
