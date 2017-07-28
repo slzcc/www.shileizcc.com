@@ -10,6 +10,7 @@ node(){
     Maintainer_name="slzcc"
     Container_name="nginx"
     Tag="gateway"
+    ContainerImage = "${Registry_addr}/${Maintainer_name}/${Container_name}:${Tag}-${Commit}"
 
     Account = "aliyunhub"
 
@@ -21,8 +22,8 @@ node(){
       echo "****************************************************************************************************************"
 
       stage('Docker Push')
-      //  input "请确保上述没问题后，Push 远程仓库！"
-      //  newContainers.push()
+//        input "请确保上述没问题后，Push 远程仓库！"
+//        newContainers.push()
 
     }
     stage('准备环境变量')
