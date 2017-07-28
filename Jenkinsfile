@@ -26,7 +26,7 @@ node(){
 
       stage('Docker Push')
 //        input "请确保上述没问题后，Push 远程仓库！"
-//        newContainers.push()
+        newContainers.push()
 
     }
     stage('准备环境变量')
