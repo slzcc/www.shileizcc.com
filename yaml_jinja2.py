@@ -24,7 +24,8 @@ def index():
                            volumeMountsName=os.getenv('volumeMountsName'),
                            volumeMountsEndpoint=os.getenv('volumeMountsEndpoint'),
                            volumesName=os.getenv('volumesName'),
-                           volumesEndpoint=os.getenv('volumesEndpoint')
+                           volumesEndpoint=os.getenv('volumesEndpoint'),
+                           isVolume=os.getenv('isVolume')
                             )
     print(data)
 
