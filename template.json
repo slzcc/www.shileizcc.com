@@ -14,20 +14,20 @@
     "selector": {
       "matchLabels": {
         "app": "{{ AppName }}",
-        "task": "{{ ServiceName }}"
+        "task": "{{ ServiceNames }}"
       }
     },
     "template": {
       "metadata": {
         "labels": {
-          "name": "{{ ServicesName }}",
+          "name": "{{ ServicesNames }}",
           "version": "{{ SpecTemplateMetadataLabelsVersion }}"
         }
       },
       "spec": {
         "containers": [
           {
-            "name": "{{ ServiceName }}",
+            "name": "{{ ServiceNames }}",
             "image": "{{ ContainerImage }}",
             "resources": {
               "requests": {

@@ -35,7 +35,7 @@ node(){
         env.MetadataNamespace = "default"
         env.MetadataVersion = "v2"
         env.SpecReplicas = "1"
-        env.SpecTemplateMetadataLabelsVersion = MetadataVersion
+        env.SpecTemplateMetadataLabelsVersion = ${MetadataVersion}
         env.ContainerImage = "${ContainerImage}"
         env.ServicesName = "jenkins"
         env.AppName = "cheese"
@@ -52,7 +52,7 @@ node(){
     stage('执行脚本生成模板 ')
      
         echo "-***************************************-"
-//        sh "python3 yaml_jinja2.py > ${WORKSPACE}/gateway.json"
+        sh "python3 yaml_jinja2.py > ${WORKSPACE}/gateway.json"
         sh "python3 yaml_jinja2.py"
         echo "***************************************>"
 }
