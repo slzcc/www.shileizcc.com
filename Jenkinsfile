@@ -45,7 +45,6 @@ node(){
         env.volumesName = "home"
         env.volumesEndpoint= "/var/jenkins_home"
         env.LC_ALL="C"
-        sh 'sleep 1234'
     
     stage('执行脚本生成模板 ')
      
