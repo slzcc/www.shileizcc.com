@@ -1,7 +1,4 @@
 node(){
-  stage('Clean up the residual')
-    sh 'rm -rf ${WORKSPACE}/*'
-
   stage "GIt"
     git "https://github.com/slzcc/www.shileizcc.com"
     Commit = sh(returnStdout: true, script: 'git rev-parse --short HEAD').trim()
@@ -13,8 +10,8 @@ node(){
     Maintainer_name="slzcc"
     Container_name="nginx"
     Tag="gateway"
-    
-    Account = "AliyunHubAccount"
+
+    Account = "aliyunhub"
 
     docker.withRegistry("${Registry_url}", "${Account}") {
 
