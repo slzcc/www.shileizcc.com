@@ -1,0 +1,49 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: {{ MetadataName }}
+  namespace: {{ MetadataNamespace }}
+  labels: 
+    app: {{ AppName }}
+    cheese: {{ MetadataVersion }}
+spec:
+  replicas: {{ SpecReplicas }}
+  selector:
+    matchLabels:
+      app: {{ AppName }}
+      task: {{ ServiceName }}
+  template:
+    metadata:
+      labels:
+        name: {{ ServicesName }}
+        version: {{ SpecTemplateMetadataLabelsVersion }}
+    spec:
+      containers:
+      - name: {{ ServiceName }}
+        image:  {{ ContainerImage }}
+        resources:
+          requests:
+            cpu: {{ CPU }}
+            memory: {{ MEM }}
+        ports:
+        - name: {{ PortsName }}
+          containerPort: {{ PortsEndpoint }}
+        - name: jnlp
+          containerPort: 50000
+        env:
+        - name: TZ
+          value: "Asia/Shanghai"
+        securityContext:
+          runAsNonRoot: true
+          runAsUser: 10001
+          capabilities:
+            drop:
+              - all
+          readOnlyRootFilesystem: true
+        volumeMounts:
+          - mountPath: "{{ volumeMountsEndpoint }}"
+            name: {{ volumeMountsName }}
+      volumes:
+        - hostPath:
+            path: "{{ volumesEndpoint }}"
+          name: {{ volumesName }}
