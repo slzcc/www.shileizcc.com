@@ -13,8 +13,7 @@ node(){
 
     Account = "aliyunhub"
 
-//    withDockerRegistry([credentialsId: 'aliyunhub', url: 'https://registry.aliyuncs.com/']) {
-    docker.withRegistry("${Registry_url}", 'aliyunhub') {
+//    docker.withRegistry("${Registry_url}", 'aliyunhub') {
       def newContainers = docker.build "${Maintainer_name}/${Container_name}:${Tag}-${Commit}"
 
       echo "****************************************************************************************************************"
@@ -25,5 +24,5 @@ node(){
       //  input "请确保上述没问题后，Push 远程仓库！"
         newContainers.push()
 
-    }
+//    }
 }
