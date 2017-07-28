@@ -20,7 +20,7 @@
     "template": {
       "metadata": {
         "labels": {
-          "app": "{{ ServicesName }}",
+          "app": "{{ AppName }}",
           "task": "{{ ServicesName }}",
           "version": "{{ MetadataVersion }}"
         }
@@ -39,14 +39,16 @@
                 "containerPort": {{ PortsEndpoint }}
               }
             ],
-            "env":{
-              "name": "TZ",
-              "value": "Asia/Shanghai"
-            },
+            "env": [
+              {
+                "name": "TZ",
+                "value": "Asia/Shanghai"
+              }
+            ],
             "volumeMounts": [
               {
-                "mountPath": "/etc/nginx/conf.d",
-                "name": "config-volume"
+                "mountPath": "{{ volumeMountsEndpoint }}",
+                "name": "{{ volumeMountsName }}"
               }
             ]
           }

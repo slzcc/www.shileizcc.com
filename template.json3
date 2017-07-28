@@ -39,10 +39,12 @@
                 "containerPort": {{ PortsEndpoint }}
               }
             ],
-            "env":{
-              "name": "TZ",
-              "value": "Asia/Shanghai"
-            }
+            "env": [
+              {
+                "name": "TZ",
+                "value": "Asia/Shanghai"
+              }
+            ]
           }
         ],
         "imagePullSecrets": [
