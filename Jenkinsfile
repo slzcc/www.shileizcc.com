@@ -44,11 +44,12 @@ node(){
         env.volumeMountsEndpoint = "/var/jenkins_home"
         env.volumesName = "home"
         env.volumesEndpoint= "/var/jenkins_home"
+        env.LC_ALL="C"
         sh 'sleep 1234'
     
     stage('执行脚本生成模板 ')
      
         echo "-***************************************-"
-        sh "python3 jinja2.py"
+        sh "python3 yaml_jinja2.py"
         echo "***************************************>"
 }
