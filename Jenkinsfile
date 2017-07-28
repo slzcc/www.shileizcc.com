@@ -55,4 +55,9 @@ node(){
         sh "python3 yaml_jinja2.py > ${WORKSPACE}/gateway.json"
         sh "python3 yaml_jinja2.py"
         echo "***************************************>"
+
+//    stage('Update K8s Service 镜像')
+
+//        sh 'curl -ik -H "Authorization: Bearer $(cat /var/run/secrets/kubernetes.io/serviceaccount/token)" -H "Content-Type:application/strategic-merge-patch+json" -X PATCH --data @gateway.yaml https://kubernetes.default/apis/extensions/v1beta1/namespaces/default/deployments/gateway'
+    }
 }

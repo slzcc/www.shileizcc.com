@@ -6,7 +6,8 @@
     "namespace": "{{ MetadataNamespace }}",
     "labels": {
       "app": "{{ AppName }}",
-      "cheese": "{{ MetadataVersion }}"
+      "cheese": "{{ ServicesName }}",
+      "version": "{{ MetadataVersion }}"
     }
   },
   "spec": {
@@ -14,20 +15,20 @@
     "selector": {
       "matchLabels": {
         "app": "{{ AppName }}",
-        "task": "{{ ServiceNames }}"
+        "task": "{{ ServicesName }}"
       }
     },
     "template": {
       "metadata": {
         "labels": {
-          "name": "{{ ServicesNames }}",
+          "name": "{{ ServicesName }}",
           "version": "{{ SpecTemplateMetadataLabelsVersion }}"
         }
       },
       "spec": {
         "containers": [
           {
-            "name": "{{ ServiceNames }}",
+            "name": "{{ ServicesName }}",
             "image": "{{ ContainerImage }}",
             "resources": {
               "requests": {
