@@ -13,7 +13,7 @@ node(){
 
     Account = "aliyunhub"
 
-    withDockerRegistry([credentialsId: 'aliyunhub', url: 'https://registry.aliyuncs.com']) {
+    withDockerRegistry([credentialsId: 'aliyunhub', url: 'https://registry.aliyuncs.com/']) {
 
       def newContainers = docker.build "${Maintainer_name}/${Container_name}:${Tag}-${Commit}"
 
