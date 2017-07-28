@@ -37,7 +37,7 @@ node(){
         env.SpecReplicas = "1"
         env.SpecTemplateMetadataLabelsVersion = "${MetadataVersion}"
         env.ContainerImage = "${ContainerImage}"
-        env.ServicesName = "jenkins"
+        env.ServicesName = "gateway"
         env.AppName = "cheese"
         env.CPU = "1000m"
         env.MEM = "600Mi"
@@ -59,5 +59,5 @@ node(){
 //    stage('Update K8s Service 镜像')
 
 //        sh 'curl -ik -H "Authorization: Bearer $(cat /var/run/secrets/kubernetes.io/serviceaccount/token)" -H "Content-Type:application/strategic-merge-patch+json" -X PATCH --data @gateway.yaml https://kubernetes.default/apis/extensions/v1beta1/namespaces/default/deployments/gateway'
-    }
+    
 }
