@@ -5,7 +5,7 @@ from jinja2 import Template
 import os
 
 def index():
-    with open("template.json2") as fd:
+    with open("template.json3") as fd:
         result = fd.read()
 
     template = Template(result)
