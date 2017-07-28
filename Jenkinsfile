@@ -5,15 +5,15 @@ node(){
 
   stage "Build"
 
-    Registry_url="https://registry.cn-hangzhou.aliyuncs.com/"
+    Registry_url="https://registry.aliyuncs.com/"
     Registry_addr="registry.aliyuncs.com"
     Maintainer_name="slzcc"
     Container_name="nginx"
     Tag="gateway"
 
-    docker_creds_id = "aliyunhub"
+    Account = "aliyunhub"
 
-    docker.withRegistry("${Registry_url}", "${docker_creds_id}") {
+    withDockerRegistry([credentialsId: "${Account}", url: "${Registry_url}" ])
 
       def newContainers = docker.build "${Maintainer_name}/${Container_name}:${Tag}-${Commit}"
 
